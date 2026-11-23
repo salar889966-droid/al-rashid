@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import {
   ArrowUpRight, Bell, CalendarDays, Check, ChevronDown, Clock3, CloudUpload,
   Facebook, FileImage, ImagePlus, Instagram, LayoutDashboard, Menu, MoreHorizontal,
-  PanelLeftClose, Plus, Search, Send, Settings, Sparkles, WandSparkles, X
+  Plus, Search, Send, Settings, Sparkles, WandSparkles, X
 } from "lucide-react";
 
 type MediaItem = { name: string; type: string; size: string; url: string };
@@ -15,7 +15,7 @@ const initialPosts = [
 export default function App() {
   const [active, setActive] = useState("Overview");
   const [files, setFiles] = useState<MediaItem[]>([]);
-  const [posts, setPosts] = useState(initialPosts);
+  const posts = initialPosts;
   const [autoPublish, setAutoPublish] = useState(true);
   const [notice, setNotice] = useState("");
   const [search, setSearch] = useState("");

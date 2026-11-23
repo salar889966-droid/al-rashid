@@ -9,7 +9,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const pool = process.env.DATABASE_URL
   ? new pg.Pool({
       connectionString: process.env.DATABASE_URL,
-      ssl: process.env.DATABASE_SSL === "true" ? { rejectUnauthorized: false } : undefined,
+      ssl: { rejectUnauthorized: false },
     })
   : null;
 
